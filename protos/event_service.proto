@@ -23,60 +23,38 @@ service EventService {
 }
 
 message ListEventRequest {
-  // The parent resource name, for example, "shelves/shelf1"
   LatLng location = 1;
-
-  // The maximum number of items to return.
   int32 page_size = 2;
-
-  // The next_page_token value returned from a previous List request, if any.
   int32 previous_page = 3;
 }
 
 message ListEventResponse {
-  // The field name should match the noun "Event" in the method name.
-  // There will be a maximum number of items returned based on the page_size
-  // field in the request.
   repeated Event events = 1;
-
-  // Token to retrieve the next page of results, or empty if there are no more
-  // results in the list.
   int32 next_page_token = 2;
 }
 
 message GetEventRequest {
-  // The field will contain name of the resource requested.
   string id = 1;
 }
 
 message CreateEventRequest {
-  // The Event resource to create.
-  // The field name should match the Noun in the method name.
   Event event = 1;
 }
 
 message UpdateEventRequest {
-  // The Event resource which replaces the resource on the server.
   Event event = 1;
-
-  // The update mask applies to the resource. For the `FieldMask` definition,
-  // see
-  // https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
   google.protobuf.FieldMask update_mask = 2;
 }
 
 message DeleteEventRequest {
-  // The resource name of the Event to be deleted.
   string event_id = 1;
 }
 
 message GetEventResponse {
-  // The field name should match the noun in the method name.
   Event event = 1;
 }
 
 message CreateEventResponse {
-  // The field name should match the noun in the method name.
   Event event = 1;
 }
 

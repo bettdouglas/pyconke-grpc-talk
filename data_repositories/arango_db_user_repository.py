@@ -1,5 +1,4 @@
 from repositories import UserRepository
-from arango.collection import StandardCollection
 from arango.database import StandardDatabase
 from domain_models import User
 from datetime import datetime

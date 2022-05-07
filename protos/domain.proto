@@ -8,7 +8,6 @@ import "google/protobuf/timestamp.proto";
 message User {
     string id = 1;
     string name = 2;
-    string email = 3;
     string phone = 4;
 }
 
@@ -20,7 +19,7 @@ message LatLng {
 message Event {
     string id = 1;
     string title = 2;
-    string description = 3;
+    // string description = 3;
     // date time
     google.protobuf.Timestamp date = 4;
     // udration in hours
@@ -28,4 +27,5 @@ message Event {
     User creator = 6;
     string location = 7;
     LatLng latlng = 8;
+    repeated string descriptions = 9;
 }

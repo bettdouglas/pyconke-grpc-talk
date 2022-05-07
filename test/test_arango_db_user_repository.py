@@ -1,5 +1,4 @@
 from datetime import datetime
-from arango_db_user_repository import ArangoUserRepository
 from domain_models import User
 
 def test_can_add_user(arango_user_repository):

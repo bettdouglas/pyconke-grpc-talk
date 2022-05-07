@@ -8,8 +8,7 @@ from typing import List, Optional
 import betterproto
 import grpclib
 
-from .google import protobuf
-
+from betterproto.lib.google import protobuf
 
 @dataclass
 class User(betterproto.Message):
